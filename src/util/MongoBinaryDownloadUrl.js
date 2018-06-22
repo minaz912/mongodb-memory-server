@@ -118,7 +118,7 @@ export default class MongoBinaryDownloadUrl {
       return this.getMintVersionString(os);
     }
     console.warn(`Unknown linux distro ${os.dist}, falling back to legacy MongoDB build`);
-    return this.getLegacyVersionString(os);
+    return this.getUbuntuVersionString({ release: '16.04' });
   }
 
   getDebianVersionString(os: OS): string {
